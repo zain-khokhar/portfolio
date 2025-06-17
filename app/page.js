@@ -1,7 +1,7 @@
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import Head from 'next/head';
-import { FaGithub, FaLinkedin, FaEnvelope, FaServer, FaDatabase, FaCode, FaMobile } from 'react-icons/fa';
+import { FaGithub,FaCode, FaLinkedin, FaEnvelope, FaServer, FaDatabase,  FaMobile } from 'react-icons/fa';
 
 // --- Theme Logic Start ---
 
@@ -52,7 +52,23 @@ const themes = {
 const ThemeContext = createContext();
 
 function ThemeProvider({ children }) {
-  const [themeKey, setThemeKey] = useState("light");
+  const [mounted, setMounted] = useState(false);
+  const [themeKey, setThemeKey] = useState('light');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme && themes[savedTheme]) {
+      setThemeKey(savedTheme);
+    }
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem('theme', themeKey);
+    }
+  }, [themeKey, mounted]);
+
   const theme = themes[themeKey];
 
   return (
@@ -307,10 +323,19 @@ function PortfolioContent() {
       <section id="projects" className={`py-16 ${theme.cardBg}`}>
         <div className="container mx-auto px-4">
           <h2 className={`text-3xl font-bold text-center ${theme.text} mb-12`}>Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">            {projects.map((project, index) => (
               <div key={project.id} className={`border ${theme.border} rounded-lg overflow-hidden shadow-sm`}>
-                <div className="bg-gray-200 border-2 border-dashed w-full h-48" />
+                {index === 0 ? (
+                  <div className="w-full h-48 relative">
+                    <img
+                      src="/LMS.PNG"
+                      alt="LMS Project Screenshot"
+                      className="w-full h-full object-cover object-center rounded-t-lg"
+                    />
+                  </div>
+                ) : (
+                  <div className="bg-gray-200 border-2 border-dashed w-full h-48" />
+                )}
                 <div className="p-6">
                   <h3 className={`text-xl font-semibold ${theme.text} mb-2`}>{project.title}</h3>
                   <p className={`${theme.text} opacity-80 mb-4`}>
@@ -374,13 +399,13 @@ function PortfolioContent() {
                     </a>
                   
                   <a
-                      href="https://github.com/zain-khokhar"
+                      href="https://leetcode.com/u/nfQA0hEV3z/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`${theme.text} flex items-center`}
                     >
-                      <FaGithub className={`mr-3 ${theme.accent}`} />
-                      github.com/zain-khokhar
+                      <FaCode className={`mr-3 ${theme.accent}`} />
+                      leetcode.com/zain-khokhar
                     </a>
                   </div>
                 </div>
