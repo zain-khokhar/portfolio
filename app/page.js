@@ -6,7 +6,7 @@ import { FaGithub,FaCode, FaLinkedin, FaEnvelope, FaServer, FaDatabase,  FaMobil
 // --- Theme Logic Start ---
 
 const themes = {
-  light: {
+  light: { 
     name: "Light",
     bg: "bg-white",
     text: "text-gray-800",
