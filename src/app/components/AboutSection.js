@@ -12,7 +12,6 @@ const AboutSection = () => {
         { name: 'React.js', level: 95 },
         { name: 'Next.js', level: 90 },
         { name: 'JavaScript (ES6+)', level: 95 },
-        { name: 'TypeScript', level: 85 },
         { name: 'HTML5/CSS3', level: 95 },
         { name: 'Tailwind CSS', level: 90 }
       ]
@@ -26,7 +25,6 @@ const AboutSection = () => {
         { name: 'MongoDB', level: 85 },
         { name: 'Firebase', level: 80 },
         { name: 'RESTful APIs', level: 90 },
-        { name: 'GraphQL', level: 75 }
       ]
     },
     {
@@ -35,8 +33,6 @@ const AboutSection = () => {
       technologies: [
         { name: 'Git & GitHub', level: 90 },
         { name: 'Vercel/Netlify', level: 85 },
-        { name: 'Docker', level: 70 },
-        { name: 'AWS Basics', level: 65 },
         { name: 'Figma', level: 80 },
         { name: 'VS Code', level: 95 }
       ]
@@ -51,7 +47,7 @@ const AboutSection = () => {
     },
     {
       title: 'Live Projects',
-      value: '10+',
+      value: '5+',
       description: 'Successfully deployed and maintained applications'
     },
     {

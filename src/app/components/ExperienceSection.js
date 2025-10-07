@@ -18,7 +18,7 @@ const ExperienceSection = () => {
         'Achieved 100% client satisfaction rate',
         'Optimized application performance by 40%'
       ],
-      tech: ['React', 'Next.js', 'Node.js', 'MongoDB', 'TypeScript', 'AWS']
+      tech: ['React', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Vercel', 'Git' ]
     },
     {
       title: 'MERN Stack Developer',
