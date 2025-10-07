@@ -1,0 +1,216 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Github, Linkedin, Mail, ExternalLink, Code, Database, Zap } from 'lucide-react';
+import Image from 'next/image';
+
+const HeroSection = () => {
+  const socialLinks = [
+    {
+      icon: Github,
+      href: 'https://github.com/zain-khokhar',
+      label: 'GitHub'
+    },
+    {
+      icon: Linkedin,
+      href: 'https://linkedin.com/in/zain-khokhar-55876832a',
+      label: 'LinkedIn'
+    },
+    {
+      icon: Mail,
+      href: 'mailto:zainkhokhar.dev@gmail.com',
+      label: 'Email'
+    }
+  ];
+
+  const stats = [
+    { label: 'LeetCode Problems', value: '150+', icon: Code },
+    { label: 'Live Projects', value: '10+', icon: ExternalLink },
+    { label: 'Tech Stack', value: 'MERN', icon: Database },
+    { label: 'Experience', value: '2+ Years', icon: Zap }
+  ];
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-primary font-semibold text-lg"
+              >
+                Hello, I&apos;m
+              </motion.div>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              >
+                <span className="gradient-text">Zain Ul Abdin</span>
+              </motion.h1>
+              
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="text-2xl md:text-3xl font-semibold text-muted-foreground"
+              >
+                MERN & Next.js Developer
+              </motion.h2>
+            </div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg text-muted-foreground leading-relaxed max-w-xl"
+            >
+              Full Stack Developer specializing in building modern, scalable web applications. 
+              Passionate about creating seamless user experiences with clean, efficient code. 
+              Strong in Data Structures & Algorithms with 150+ LeetCode problems solved.
+            </motion.p>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+              >
+                View My Work
+              </motion.button>
+              
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3 border border-border rounded-lg font-semibold hover:bg-accent transition-colors duration-200"
+              >
+                Get In Touch
+              </motion.button>
+            </motion.div>
+
+            {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex space-x-4"
+            >
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-3 bg-card border border-border rounded-lg hover:border-primary transition-colors duration-200 hover-lift"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </motion.a>
+              ))}
+            </motion.div>
+          </motion.div>
+
+          {/* Profile Image & Stats */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            {/* Profile Image Placeholder */}
+            <div className="relative mx-auto w-80 h-80 mb-8">
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center border-4 border-primary/20"
+              >
+                <div className="text-6xl font-bold text-primary/60">ZA</div>
+              </motion.div>
+              
+              {/* Floating elements */}
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ repeat: Infinity, duration: 4 }}
+                className="absolute -top-4 -left-4 w-8 h-8 bg-primary rounded-full opacity-60"
+              ></motion.div>
+              <motion.div
+                animate={{ y: [10, -10, 10] }}
+                transition={{ repeat: Infinity, duration: 3, delay: 1 }}
+                className="absolute -bottom-4 -right-4 w-6 h-6 bg-secondary rounded-full opacity-60"
+              ></motion.div>
+            </div>
+
+            {/* Stats Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="grid grid-cols-2 gap-4"
+            >
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.9 + index * 0.1 }}
+                  className="bg-card border border-border rounded-lg p-4 text-center hover-lift"
+                >
+                  <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
+                  <div className="font-bold text-lg">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="w-6 h-10 border-2 border-primary rounded-full flex justify-center"
+          >
+            <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
