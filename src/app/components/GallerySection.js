@@ -15,8 +15,8 @@ const GallerySection = () => {
       icon: Code
     },
     {
-      title: 'Real-Time Chat UI',
-      description: 'Clean and intuitive chat interface with real-time messaging',
+      title: 'Social Media App',
+      description: 'Modern social media application , post sharing, and user interactions.',
       category: 'Web Development',
       image: '/api/placeholder/400/300',
       link: 'https://zain-chat.vercel.app/',
@@ -39,21 +39,13 @@ const GallerySection = () => {
       icon: Zap
     },
     {
-      title: 'Mobile-First Design',
-      description: 'Responsive design patterns for modern web applications',
+      title: 'Job portal ',
+      description: 'A job portal website that connects job seekers with employers.',
       category: 'Responsive Design',
       image: '/api/placeholder/400/300',
       link: '#',
       icon: ImageIcon
     },
-    {
-      title: 'Dashboard Analytics',
-      description: 'Data visualization and analytics dashboard components',
-      category: 'Data Visualization',
-      image: '/api/placeholder/400/300',
-      link: '#',
-      icon: Code
-    }
   ];
 
   const categories = ['All', 'Web Development', 'UI/UX Design', 'Web Design', 'Web App'];

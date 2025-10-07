@@ -11,6 +11,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ResumeModal from './components/ResumeModal';
 import ScrollToTop from './components/ScrollToTop';
+import CursorFollower from './components/CursorFollower';
 
 export default function Home() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
         isOpen={isResumeOpen} 
         onClose={() => setIsResumeOpen(false)} 
       />
+      <CursorFollower />
     </>
   );
 }

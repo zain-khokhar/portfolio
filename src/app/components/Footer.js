@@ -17,7 +17,7 @@ const Footer = () => {
     },
     {
       icon: Mail,
-      href: 'mailto:zainkhokhar.dev@gmail.com',
+      href: 'mailto:zaink334705@gmail.com',
       label: 'Email'
     }
   ];
@@ -148,7 +148,6 @@ const Footer = () => {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              <Heart className="h-4 w-4 text-red-500 fill-current" />
             </motion.div>
             <span>using Next.js & Tailwind CSS</span>
           </div>

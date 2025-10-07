@@ -16,8 +16,8 @@ const ProjectsSection = () => {
       featured: true
     },
     {
-      title: 'Real-Time Chat Application',
-      description: 'Feature-rich chat app with real-time messaging capabilities using Firebase and Pusher Channels.',
+      title: 'Social Media App',
+      description: 'Modern social media application , post sharing, and user interactions.',
       image: '/api/placeholder/600/400',
       tech: ['Next.js', 'Firebase', 'Pusher', 'Real-time'],
       liveUrl: 'https://zain-chat.vercel.app/',

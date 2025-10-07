@@ -99,7 +99,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 cursor-hover glow-effect"
               >
                 View My Work
               </motion.button>
@@ -108,7 +108,7 @@ const HeroSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 border border-border rounded-lg font-semibold hover:bg-accent transition-colors duration-200"
+                className="px-8 py-3 border border-border rounded-lg font-semibold hover:bg-accent transition-colors duration-200 cursor-hover"
               >
                 Get In Touch
               </motion.button>
@@ -129,7 +129,7 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 bg-card border border-border rounded-lg hover:border-primary transition-colors duration-200 hover-lift"
+                  className="p-3 bg-card border border-border rounded-lg hover:border-primary transition-colors duration-200 hover-lift cursor-hover"
                   aria-label={social.label}
                 >
                   <social.icon className="h-5 w-5" />
@@ -151,9 +151,10 @@ const HeroSection = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center border-4 border-primary/20"
+                className="w-full h-full gradient-shift rounded-full flex items-center justify-center border-4 border-primary/20 relative overflow-hidden cursor-hover"
               >
-                <div className="text-6xl font-bold text-primary/60">ZA</div>
+                <div className="text-6xl font-bold text-white/90 z-10 relative">ZA</div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent"></div>
               </motion.div>
               
               {/* Floating elements */}

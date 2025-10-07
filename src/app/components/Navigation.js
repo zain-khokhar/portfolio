@@ -69,7 +69,7 @@ const Navigation = ({ onResumeClick }) => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium nav-link"
+                className="text-foreground hover:text-primary transition-colors duration-200 font-medium nav-link cursor-hover"
                 onClick={(e) => {
                   e.preventDefault();
                   document.querySelector(item.href)?.scrollIntoView({
@@ -92,7 +92,7 @@ const Navigation = ({ onResumeClick }) => {
                 whileTap={{ scale: 0.95 }}
                 onClick={handleThemeToggle}
                 disabled={isThemeChanging}
-                className="p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn disabled:opacity-50"
+                className="p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn disabled:opacity-50 cursor-hover"
                 aria-label="Toggle theme"
               >
                 <motion.div
@@ -121,7 +121,7 @@ const Navigation = ({ onResumeClick }) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               onClick={handleDownloadResume}
-              className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium btn"
+              className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium btn cursor-hover glow-effect"
             >
               <Download className="h-4 w-4" />
               <span>Resume</span>
@@ -129,7 +129,7 @@ const Navigation = ({ onResumeClick }) => {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn"
+              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn cursor-hover"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >

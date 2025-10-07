@@ -18,13 +18,13 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'zainkhokhar.dev@gmail.com',
-      link: 'mailto:zainkhokhar.dev@gmail.com'
+      value: 'zaink334705@gmail.com',
+      link: 'mailto:zaink334705@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+92 (Available on request)',
+      value: '+92 303 5402494',
       link: '#'
     },
     {
@@ -52,7 +52,7 @@ const ContactSection = () => {
       icon: ExternalLink,
       label: 'Portfolio',
       value: 'mern-portfolio-sigma.vercel.app',
-      link: 'https://mern-portfolio-sigma.vercel.app/'
+      link: ''
     },
     {
       icon: MessageCircle,
@@ -290,7 +290,7 @@ const ContactSection = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm">Response within 24 hours</span>
+                  <span className="text-sm">Response within 2 hours</span>
                 </div>
               </div>
             </div>
