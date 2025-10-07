@@ -96,8 +96,12 @@ const ResumeModal = ({ isOpen, onClose }) => {
   };
 
   const handleDownload = () => {
-    // This would typically generate and download a PDF
-    alert('Resume download would be implemented here. You can create a PDF version or link to a downloadable file.');
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Zain_Ul_Abdin_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   if (!isOpen) return null;
