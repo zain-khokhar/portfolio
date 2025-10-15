@@ -56,7 +56,7 @@ const GallerySection = () => {
     : galleryItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-20">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -64,12 +64,12 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Project <span className="gradient-text">Gallery</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
             A visual showcase of my work including web applications, UI designs, and development projects
           </p>
         </motion.div>
@@ -80,7 +80,7 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12"
         >
           {categories.map((category) => (
             <motion.button
@@ -88,7 +88,7 @@ const GallerySection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-lg font-medium transition-colors duration-200 ${
+              className={`px-4 sm:px-6 py-2 rounded-lg font-medium transition-colors duration-200 text-xs sm:text-sm touch-manipulation ${
                 selectedCategory === category
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-card border border-border hover:bg-accent'
@@ -102,7 +102,7 @@ const GallerySection = () => {
         {/* Gallery Grid */}
         <motion.div
           layout
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
         >
           {filteredItems.map((item, index) => (
             <motion.div
@@ -115,7 +115,7 @@ const GallerySection = () => {
             >
               {/* Image Placeholder */}
               <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden">
-                <item.icon className="h-12 w-12 text-primary/60" />
+                <item.icon className="h-10 w-10 sm:h-12 sm:w-12 text-primary/60" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Overlay */}
@@ -126,26 +126,26 @@ const GallerySection = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 hover:bg-white/30 transition-colors duration-200"
+                    className="p-2 sm:p-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 hover:bg-white/30 transition-colors duration-200 touch-manipulation"
                   >
-                    <ExternalLink className="h-5 w-5 text-white" />
+                    <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </motion.a>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">
                     {item.category}
                   </span>
                 </div>
                 
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-200">
+                <h3 className="text-base sm:text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-200">
                   {item.title}
                 </h3>
                 
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -159,9 +159,9 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-12"
         >
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base px-4">
             Want to see more of my work or discuss a project?
           </p>
           <motion.a
@@ -170,7 +170,7 @@ const GallerySection = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
+            className="inline-flex items-center space-x-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium text-sm sm:text-base touch-manipulation"
           >
             <Github className="h-4 w-4" />
             <span>View All Projects on GitHub</span>
