@@ -17,9 +17,9 @@ export default function Home() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <Navigation onResumeClick={() => setIsResumeOpen(true)} />
-      <main className="min-h-screen">
+      <main className="min-h-screen overflow-x-hidden w-full">
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
@@ -34,6 +34,6 @@ export default function Home() {
         onClose={() => setIsResumeOpen(false)} 
       />
       <CursorFollower />
-    </>
+    </div>
   );
 }
