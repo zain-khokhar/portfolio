@@ -82,7 +82,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/10">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-secondary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -90,18 +90,18 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
             Have a project in mind or want to collaborate? I&apos;d love to hear from you. 
             Let&apos;s create something amazing together!
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -110,11 +110,11 @@ const ContactSection = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-2"
           >
-            <div className="bg-card border border-border rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
+            <div className="bg-card border border-border rounded-lg p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Send me a message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Full Name
@@ -126,7 +126,7 @@ const ContactSection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200 text-sm sm:text-base touch-manipulation"
                       placeholder="Your name"
                     />
                   </div>
@@ -142,7 +142,7 @@ const ContactSection = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200 text-sm sm:text-base touch-manipulation"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -159,7 +159,7 @@ const ContactSection = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200 text-sm sm:text-base touch-manipulation"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -175,7 +175,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200 resize-none"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-background border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-colors duration-200 resize-none text-sm sm:text-base touch-manipulation"
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
@@ -185,7 +185,7 @@ const ContactSection = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full md:w-auto px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base touch-manipulation"
                 >
                   {isSubmitting ? (
                     <>
@@ -209,12 +209,12 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             {/* Contact Details */}
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-6">Contact Information</h3>
-              <div className="space-y-4">
+            <div className="bg-card border border-border rounded-lg p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Contact Information</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.label}
@@ -222,22 +222,22 @@ const ContactSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-start space-x-4"
+                    className="flex items-start space-x-3 sm:space-x-4"
                   >
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                      <info.icon className="h-5 w-5 text-primary" />
+                    <div className="p-2 bg-primary/10 rounded-lg flex-shrink-0">
+                      <info.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
-                    <div>
-                      <p className="font-medium text-sm">{info.label}</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-xs sm:text-sm">{info.label}</p>
                       {info.link !== '#' ? (
                         <a
                           href={info.link}
-                          className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                          className="text-muted-foreground hover:text-primary transition-colors duration-200 text-xs sm:text-sm break-words touch-manipulation"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-muted-foreground">{info.value}</p>
+                        <p className="text-muted-foreground text-xs sm:text-sm">{info.value}</p>
                       )}
                     </div>
                   </motion.div>
@@ -246,9 +246,9 @@ const ContactSection = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
-              <div className="space-y-4">
+            <div className="bg-card border border-border rounded-lg p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Connect With Me</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -260,14 +260,14 @@ const ContactSection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center space-x-4 p-3 rounded-lg hover:bg-accent transition-colors duration-200 group"
+                    className="flex items-center space-x-3 sm:space-x-4 p-2.5 sm:p-3 rounded-lg hover:bg-accent transition-colors duration-200 group touch-manipulation"
                   >
-                    <div className="p-2 bg-primary/10 group-hover:bg-primary/20 rounded-lg transition-colors duration-200">
-                      <social.icon className="h-4 w-4 text-primary" />
+                    <div className="p-2 bg-primary/10 group-hover:bg-primary/20 rounded-lg transition-colors duration-200 flex-shrink-0">
+                      <social.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary" />
                     </div>
-                    <div>
-                      <p className="font-medium text-sm">{social.label}</p>
-                      <p className="text-muted-foreground text-sm group-hover:text-primary transition-colors duration-200">
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-xs sm:text-sm">{social.label}</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm group-hover:text-primary transition-colors duration-200 truncate">
                         {social.value}
                       </p>
                     </div>
@@ -277,20 +277,20 @@ const ContactSection = () => {
             </div>
 
             {/* Availability */}
-            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-4">Availability</h3>
-              <div className="space-y-3">
+            <div className="bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Availability</h3>
+              <div className="space-y-2.5 sm:space-y-3">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Available for freelance projects</span>
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm">Available for freelance projects</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  <span className="text-sm">Open to collaboration</span>
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-primary rounded-full flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm">Open to collaboration</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <span className="text-sm">Response within 2 hours</span>
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-yellow-500 rounded-full flex-shrink-0"></div>
+                  <span className="text-xs sm:text-sm">Response within 2 hours</span>
                 </div>
               </div>
             </div>
