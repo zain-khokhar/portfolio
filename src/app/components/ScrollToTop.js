@@ -8,16 +8,36 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    let timeoutId;
+
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      // Hide button immediately when scrolling starts
+      setIsVisible(false);
+
+      // Clear existing timeout
+      clearTimeout(timeoutId);
+
+      // Set timeout to check position after scrolling stops
+      timeoutId = setTimeout(() => {
+        if (window.pageYOffset > 300) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      }, 150);
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    
+    // Initial check
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -36,7 +56,7 @@ const ScrollToTop = () => {
       }}
       transition={{ duration: 0.3 }}
       onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-40 p-3 bg-primary text-primary-foreground rounded-full shadow-lg hover:bg-primary/90 transition-colors duration-200 hover-lift"
+      className="fixed bottom-15 right-8 z-40 p-3 bg-[#6366f1] text-primary-foreground rounded-full shadow-lg hover:bg-[#6366f1]/90 transition-colors duration-200 hover-lift"
       aria-label="Scroll to top"
     >
       <ArrowUp className="h-5 w-5" />

@@ -36,7 +36,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-10 sm:top-20 left-0 sm:left-10 w-40 sm:w-72 h-40 sm:h-72 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 sm:bottom-20 right-0 sm:right-10 w-48 sm:w-96 h-48 sm:h-96 bg-secondary/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-75 sm:w-150 h-75 sm:h-150 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 w-full">
@@ -62,9 +62,9 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight wrap-break-word max-w-full"
               >
-                <span className="gradient-text">Zain Ul Abdin</span>
+                <span className="gradient-text inline-block">Zain Ul Abdin</span>
               </motion.h1>
               
               <motion.h2
@@ -145,30 +145,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative order-first lg:order-last"
           >
-            {/* Profile Image Placeholder */}
-            <div className="relative mx-auto w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mb-6 sm:mb-8">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
-                className="w-full h-full gradient-shift rounded-full flex items-center justify-center border-4 border-primary/20 relative overflow-hidden cursor-hover"
-              >
-                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white/90 z-10 relative">ZA</div>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent"></div>
-              </motion.div>
-              
-              {/* Floating elements */}
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ repeat: Infinity, duration: 4 }}
-                className="absolute -top-2 -left-2 sm:-top-4 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 bg-primary rounded-full opacity-60"
-              ></motion.div>
-              <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ repeat: Infinity, duration: 3, delay: 1 }}
-                className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 w-5 h-5 sm:w-6 sm:h-6 bg-secondary rounded-full opacity-60"
-              ></motion.div>
-            </div>
+            {/* Profile Image Placeholder - Removed */}
+
 
             {/* Stats Grid */}
             <motion.div

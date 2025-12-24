@@ -90,7 +90,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-secondary/10">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20 bg-secondary/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -98,9 +98,9 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-12 sm:mb-16 w-full max-w-full"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 wrap-break-word">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
@@ -127,10 +127,10 @@ const ProjectsSection = () => {
                 <div className={`grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 p-4 sm:p-6 lg:p-8 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                   {/* Project Image */}
                   <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
+                    <div className="aspect-video bg-linear-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center">
                       <project.icon className="h-12 w-12 sm:h-16 sm:w-16 text-primary/60" />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent rounded-lg"></div>
                   </div>
 
                   {/* Project Content */}
@@ -208,7 +208,7 @@ const ProjectsSection = () => {
               >
                 <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="flex items-center justify-between">
-                    <project.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary flex-shrink-0" />
+                    <project.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary shrink-0" />
                     <div className="flex space-x-2">
                       {project.githubUrl !== '#' && (
                         <a

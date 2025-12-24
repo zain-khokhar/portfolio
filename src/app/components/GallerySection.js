@@ -56,7 +56,7 @@ const GallerySection = () => {
     : galleryItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section id="gallery" className="py-12 sm:py-16 lg:py-20">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -64,9 +64,9 @@ const GallerySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-12 sm:mb-16 w-full max-w-full"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 wrap-break-word">
             Project <span className="gradient-text">Gallery</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
