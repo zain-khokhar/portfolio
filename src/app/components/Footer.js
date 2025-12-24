@@ -115,7 +115,7 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <a
                 href="mailto:zainkhokhar.dev@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 block text-sm sm:text-base break-words touch-manipulation"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 block text-sm sm:text-base wrap-break-word touch-manipulation"
               >
                 zainkhokhar.dev@gmail.com
               </a>
@@ -123,7 +123,7 @@ const Footer = () => {
                 Multan Cantt, Pakistan
               </p>
               <div className="flex items-center space-x-1 text-xs sm:text-sm">
-                <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-green-500 rounded-full shrink-0"></div>
                 <span className="text-muted-foreground">Available for work</span>
               </div>
             </div>

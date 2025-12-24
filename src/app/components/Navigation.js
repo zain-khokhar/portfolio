@@ -50,12 +50,12 @@ const Navigation = ({ onResumeClick }) => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-1 sm:gap-2 flex-shrink min-w-0"
+            className="flex items-center gap-1 sm:gap-2 shrink min-w-0"
           >
             <div className="text-sm sm:text-base lg:text-xl font-bold truncate">
               <span className="gradient-text whitespace-nowrap">Zain Ul Abdin</span>
             </div>
-            <div className="hidden lg:block text-xs text-muted-foreground whitespace-nowrap flex-shrink-0">
+            <div className="hidden lg:block text-xs text-muted-foreground whitespace-nowrap shrink-0">
               MERN & Next.js Developer
             </div>
           </motion.div>
@@ -83,7 +83,7 @@ const Navigation = ({ onResumeClick }) => {
           </div>
 
           {/* Right side buttons */}
-          <div className="flex items-center gap-1 sm:gap-2 lg:gap-4 flex-shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 lg:gap-4 shrink-0">
             {/* Theme Toggle */}
             {mounted && (
               <motion.button
@@ -92,7 +92,7 @@ const Navigation = ({ onResumeClick }) => {
                 whileTap={{ scale: 0.95 }}
                 onClick={handleThemeToggle}
                 disabled={isThemeChanging}
-                className="p-1.5 sm:p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn disabled:opacity-50 cursor-hover touch-manipulation flex-shrink-0"
+                className="p-1.5 sm:p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn disabled:opacity-50 cursor-hover touch-manipulation shrink-0"
                 aria-label="Toggle theme"
               >
                 <motion.div
@@ -121,7 +121,7 @@ const Navigation = ({ onResumeClick }) => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               onClick={handleDownloadResume}
-              className="hidden sm:flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium btn cursor-hover glow-effect text-xs sm:text-sm whitespace-nowrap flex-shrink-0"
+              className="hidden sm:flex items-center gap-1.5 lg:gap-2 px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium btn cursor-hover glow-effect text-xs sm:text-sm whitespace-nowrap shrink-0"
             >
               <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               <span>CV</span>
@@ -129,7 +129,7 @@ const Navigation = ({ onResumeClick }) => {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-1.5 sm:p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn cursor-hover touch-manipulation flex-shrink-0"
+              className="md:hidden p-1.5 sm:p-2 rounded-lg hover:bg-accent transition-colors duration-200 btn cursor-hover touch-manipulation shrink-0"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
