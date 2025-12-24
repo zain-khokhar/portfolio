@@ -118,11 +118,11 @@ export default function CursorFollower() {
   if (isMobile) return null;
 
   return (
-    <>
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-[9999]">
       {/* Main cursor follower */}
       <div
         ref={followerRef}
-        className={`fixed top-0 left-0 pointer-events-none z-[9999] transition-all duration-300 ease-out ${
+        className={`fixed top-0 left-0 pointer-events-none transition-all duration-300 ease-out ${
           isClicking ? 'scale-75' : isHovering ? 'scale-150' : 'scale-100'
         }`}
         style={{
@@ -162,7 +162,7 @@ export default function CursorFollower() {
         <div
           key={index}
           ref={(el) => (trailRefs.current[index] = el)}
-          className="fixed top-0 left-0 pointer-events-none z-[9998]"
+          className="fixed top-0 left-0 pointer-events-none"
           style={{
             width: '20px',
             height: '20px',
@@ -175,7 +175,7 @@ export default function CursorFollower() {
       ))}
 
       {/* Floating orbs for ambient effect */}
-      <div className="fixed inset-0 pointer-events-none z-[9997] overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
@@ -253,6 +253,6 @@ export default function CursorFollower() {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 }
