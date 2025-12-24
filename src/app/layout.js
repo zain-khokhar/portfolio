@@ -13,18 +13,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export const metadata = {
   title: "Zain Ul Abdin - MERN & Next.js Developer",
   description: "Full Stack Developer specializing in MERN stack and Next.js. Building modern, scalable web applications with 150+ LeetCode problems solved.",
   keywords: "MERN developer, Next.js developer, Full Stack Developer, React, Node.js, MongoDB, JavaScript, Portfolio",
   authors: [{ name: "Zain Ul Abdin" }],
   creator: "Zain Ul Abdin",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
   openGraph: {
     title: "Zain Ul Abdin - MERN & Next.js Developer",
     description: "Full Stack Developer specializing in MERN stack and Next.js",
