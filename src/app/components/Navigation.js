@@ -53,11 +53,11 @@ const Navigation = ({ onResumeClick }) => {
             className="flex items-center gap-1 sm:gap-2 shrink min-w-0"
           >
             <div className="text-sm sm:text-base lg:text-xl font-bold truncate">
-              <span className="gradient-text whitespace-nowrap">Zain Ul Abdin</span>
+              <span className="whitespace-nowrap"> MERN & Next.js Developer</span>
             </div>
-            <div className="hidden lg:block text-xs text-muted-foreground whitespace-nowrap shrink-0">
+            {/* <div className="hidden lg:block text-xs text-muted-foreground whitespace-nowrap shrink-0">
               MERN & Next.js Developer
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Desktop Navigation */}

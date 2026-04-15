@@ -143,7 +143,7 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground  text-center">
-            <span>Made with</span>
+            <span>Built</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ repeat: Infinity, duration: 1.5 }}

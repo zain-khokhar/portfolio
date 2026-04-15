@@ -47,6 +47,12 @@ const ResumeModal = ({ isOpen, onClose }) => {
 
     projects: [
       {
+        name: 'Vuedu.dev',
+        tech: 'Next.js, Node.js, MongoDB, REST API',
+        description: 'Free online learning platform for Pakistani university students with notes, past papers, and quizzes',
+        link: 'https://vuedu.dev'
+      },
+      {
         name: 'LEARN LMS AI',
         tech: 'Next.js, MongoDB, AI Integration, Node.js',
         description: 'AI-powered learning management system with personalized learning features',
@@ -98,7 +104,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/resume.pdf';
-    link.download = 'Zain_Ul_Abdin_Resume.pdf';
+    link.download = 'Zain-Ul-Abdin_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -132,10 +138,10 @@ const ResumeModal = ({ isOpen, onClose }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownload}
-                className="flex items-center space-x-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200"
+                className="flex items-center space-x-2 px-4 py-2 gradient-bg text-white rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all duration-200"
               >
                 <Download className="h-4 w-4" />
-                <span>Download PDF</span>
+                <span>Download Resume</span>
               </motion.button>
               <button
                 onClick={onClose}

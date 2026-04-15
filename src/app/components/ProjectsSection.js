@@ -1,10 +1,20 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Database, Zap, Brain, MessageCircle, Image as ImageIcon, Wrench } from 'lucide-react';
+import { ExternalLink, Github, Database, Zap, Brain, MessageCircle, Image as ImageIcon, Wrench, GraduationCap } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
+    {
+      title: 'Vuedu.dev',
+      description: 'A free online learning platform built for Pakistani university students (VU, AIOU). Provides notes, past papers, quizzes, and study resources with smart search and a clean, student-friendly interface — making quality education accessible to everyone.',
+      image: '/api/placeholder/600/400',
+      tech: ['Next.js', 'Node.js', 'MongoDB', 'REST API'],
+      liveUrl: 'https://vuedu.dev',
+      githubUrl: '#',
+      icon: GraduationCap,
+      featured: true
+    },
     {
       title: 'LEARN LMS AI',
       description: 'An intelligent learning management system with AI-powered features for personalized learning experiences.',
